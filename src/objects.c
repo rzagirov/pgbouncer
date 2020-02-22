@@ -450,9 +450,9 @@ PgUser *add_pam_user(const char *name, const char *passwd)
 PgUser *force_user(PgDatabase *db, const char *name, const char *passwd)
 {
 	PgUser *user = db->forced_user;
-    if (!user) {
+	if (!user) {
            user = find_user(name);
-    }
+    	}
 
 	if (!user) {
 		user = slab_alloc(user_cache);
